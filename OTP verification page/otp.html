@@ -1,0 +1,31 @@
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>otp verification</title>
+</head>
+<body>
+	<form name="otp">
+		<input type="button" value="OTP" onClick="populateform(this.form.thelength.value)">
+		<input type="text" name="generated">
+		<br>
+		 <input type="hidden" name="thelength" value="8">
+	</form>
+
+	<script>
+		var otppattern = "0123456789zxcvbnmlkjhgfdsaqwertyuiopZXCVBNMLKJHGFDSAQWERTYUIOP"
+		var newotp=''
+
+		function otpgenerate(plength) {
+			newotp=''
+			for (i=0; i<plength; i++)
+				newotp+=otppattern.charAt(Math.floor(Math.random()*otppattern.length))
+			return newotp
+		}
+		function populateform(enterlength) {
+			//document.otp.generated.value = otpgenerate(enterlength)
+		alert(enterlength);
+		}
+	</script>
+</body>
+</html>
