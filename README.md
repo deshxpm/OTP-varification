@@ -1,2 +1,2 @@
-# OTP-varification
+# OTP-verification
 Registration using otp verificaction...
